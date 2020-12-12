@@ -1,8 +1,7 @@
 module.exports.home = function(req, res)
 {
-    return res.end("<h1>Express Server is up and running</h1>");
+    return res.render('home',{
+        pageTitle: "Codeial Home"
+    });
 }
 
-module.exports.profile = function(req, res){
-    return res.end("<h1>User Profile</h1>");
-}
