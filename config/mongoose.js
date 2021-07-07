@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const env = require('../config/environment');
-mongoose.connect(`mongodb://localhost/${env.db}`);
+mongoose.connect(`mongodb://localhost/${env.db}`,{useNewUrlParser : true, useFindAndModify : true, useCreateIndex : true, useUnifiedTopology : true});
 
 const db = mongoose.connection;
 
